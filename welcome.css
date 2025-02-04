@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    background: url(images/black.jpg);
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the welcome message */
+.welcome-message {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px;
+    width: 80%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+/* Header styling */
+.welcome-message h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Explore button styling */
+.index-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.index-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Logout button styling */
+.logout-btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+/* Hover effect for the welcome container */
+.welcome-message:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .welcome-message {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .welcome-message h2 {
+        font-size: 20px;
+    }
+
+    .index-btn, .logout-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

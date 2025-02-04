@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign Up</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right,rgb(7, 33, 55),rgb(9, 112, 172));
+            color: #ecf0f1; /* Light text color for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #ecf0f1; /* Light color for heading */
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: #34495e; /* Darker form background for contrast */
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Input and Select Styling */
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #3498db; /* Light Blue Button */
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Label Styling */
+        label {
+            font-size: 1rem;
+            color: #ecf0f1; /* Light color for labels */
+            font-weight: 500;
+        }
+
+        /* Select Styling */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #34495e; /* Dark background for select */
+            color: #ecf0f1; /* Light text for select options */
+            background-position: right 10px center;
+            background-repeat: no-repeat;
+            padding-right: 30px;
+        }
+
+        /* Add space between form elements */
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Student Sign Up</h2>
+        <form action="studentsignup.php" method="post">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="number" name="contact_number" placeholder="Contact Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="date" name="dob" placeholder="Date of Birth" required>
+            <input type="number" name="aktu_roll_no" placeholder="AKTU Roll No." required>
+            <input type="password" name="password" placeholder="Create Password" required minlength="8">
+            
+            <label for="Year">Select Year:</label>
+            <select id="Year" name="year" required>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+                <option value="Fourth">Fourth</option>
+            </select>
+            
+            <label for="Semester">Select Semester:</label>
+            <select id="Semester" name="semester" required>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+                <option value="Fourth">Fourth</option>
+                <option value="Fifth">Fifth</option>
+                <option value="Sixth">Sixth</option>
+                <option value="Seventh">Seventh</option>
+                <option value="Eighth">Eighth</option>
+            </select>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: url(images/pragati.jpg);
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    color: #f4f4f4;
+    background-color: transparent;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+/* Hero Section */
+.hero {
+  background: url(images/black.jpg);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.button {
+    background: black;
+    color: #007BFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #0056b3;
+    color: black;
+    border: darkblue;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    background: url(images/black.jpg);
+}
+
+/* About Section */
+#about {
+    background-color: transparent;
+    margin: 20px 0;
+    color: white
+    ;
+}
+/* Common Styles for All Teacher Images */
+.teacher-image {
+    width: 60px; /* Set to desired width */
+    height: 60px; /* Set to desired height */
+    border-radius: 50%; /* Keep images circular */
+    object-fit: cover; /* Ensures the image covers the container */
+    margin-right: 15px; /* Space between image and name */
+    border: 2px solid #1E90FF; /* Border color */
+}
+
+/* HOD Profile in About Section */
+.hod-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hod-profile h3 {
+    margin: 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+
+
+
+
+/* Course Container Styles */
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.course-card {
+    background: blueviolet;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px; /* Reduced padding for smaller size */
+    flex: 1 1 calc(22% - 20px); /* Adjusted width for smaller cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    max-width: 250px; /* Set a maximum width */
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+/* Course Title Styles */
+.course-card h3 {
+    font-size: 1.5em; /* Adjusted font size */
+    margin: 10px 0; /* Added margin for spacing */
+}
+
+/* Stars Styles */
+.stars {
+    color: gold; /* Set star color to gold */
+    font-size: 1.2em; /* Increase size of stars */
+}
+
+.star {
+    margin-right: 2px; /* Space between stars */
+}
+
+/* Contact Section Styles */
+#contact {
+    margin: 20px 0;
+    color: white;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Payment Button Styles */
+.payment {
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background: #007BFF;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+.subject-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subject {
+    background: #1E90FF;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subject:hover {
+    background: #0056b3;
+}
+
+.chapters {
+    display: none; /* Hidden by default */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.chapters ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chapters li {
+    margin: 5px 0;
+}
+
+.chapters a {
+    text-decoration: none;
+    color: #1E90FF;
+    transition: color 0.3s ease;
+}
+
+.chapters a:hover {
+    color: #0056b3;
+}
+

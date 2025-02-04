@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CSE Department</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: whitesmoke; /* Sky Blue to Green Gradient */
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff9800;
+            transform: scale(1.1);
+        }
+
+        h2 {
+            color: white;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 20px;
+            margin: 20px 0;
+            background: linear-gradient(to right, #44b2de, #08c5b5); /* Sky Blue to Green Gradient */
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            
+            background: linear-gradient(to right, #44b2de, #08c5b5); /* Lighter gradient on hover */
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .director-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .director-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .director-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .director-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .director-container:hover .director-button {
+            opacity: 1;
+        }
+
+        .faculty-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .faculty-card {
+            
+            background: linear-gradient(to right, #44b2de, #08c5b5); /* Sky Blue to Green Gradient */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 220px;
+            margin: 15px;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .faculty-card:hover {
+            background: #003366; /* Lighter gradient on hover */
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .faculty-image {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .faculty-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #003366;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .faculty-card:hover .faculty-button {
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Vision Section */
+        .vision-container {
+            
+            background: linear-gradient(to right, #44b2de, #08c5b5); /* Sky Blue to Green Gradient */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .vision-container:hover {
+            
+            background: linear-gradient(to right, #44b2de, #08c5b5); /* Lighter gradient on hover */
+            transform: scale(1.03);
+        }
+
+        .vision-container h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .vision-container p {
+            color: #333;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* About Us Section */
+        .about-container {
+            
+            background: linear-gradient(to right, #44b2de, #08c5b5); /* Sky Blue to Green Gradient */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .about-container:hover {
+            
+            background: linear-gradient(to right, #44b2de, #08c5b5); /* Lighter gradient on hover */
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Vision Section */
+        .vision-container {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .vision-container:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.03);
+        }
+
+        .vision-container h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .vision-container p {
+            color: #333;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Department of CSE IERT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+                <li><a href="#vision">Vision</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about-container">
+            <h2>About Us</h2>
+            <p>The Department of Computer Science & Engineering (CSE) at the Institute of Engineering and Rural Technology (IERT) aims to provide the best in computer science education. With cutting-edge curriculum and state-of-the-art facilities, we strive to nurture talent and encourage creativity among students. Our goal is to equip students with the skills required to thrive in a dynamic technological landscape and become leaders in the field of technology.</p>
+            <p>Our department offers a wide array of academic programs and research opportunities in various domains of computer science, including AI, data science, software engineering, and more.</p>
+        </section>
+
+        <!-- Director Section -->
+        <section id="director" class="section">
+            <h2>Message from the Director</h2>
+            <div class="director-container">
+                <img src="images/director.jpg" alt="Director Image" class="director-image">
+                <div class="director-message">
+                    <h3>Dr. Vimal Mishra</h3>
+                    <p>Director</p>
+                    <p>Welcome to the Department of Computer Science & Engineering at IERT. It is my privilege to lead such a talented team of faculty and students. The department is committed to offering high-quality education, fostering research, and providing students with hands-on experience in a wide variety of technological fields. Together, we aim to bridge the gap between academia and industry, enabling our students to excel in their careers and contribute meaningfully to society.</p>
+                </div>
+                <button class="director-button">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section id="vision" class="vision-container">
+            <h2>Our Vision</h2>
+            <p>Our vision is to be a globally recognized center of excellence in computer science and engineering education. We aim to create a nurturing environment where students can explore their potential, innovate, and contribute to the advancement of technology. Through a comprehensive curriculum, world-class research opportunities, and collaboration with industry leaders, we strive to shape the future of technology and foster a culture of continuous learning and growth.</p>
+        </section>
+
+        <!-- Faculty Section -->
+        <section id="faculty" class="section">
+            <h2>Our Faculty</h2>
+            <div class="faculty-container">
+                <!-- Faculty Member 1 -->
+                <div class="faculty-card">
+                    <img src="images/ROHIT SIR.jpg" alt="Faculty 1" class="faculty-image">
+                    <h3>Dr. Rohit</h3>
+                    <p>Head of Department</p>
+                    <button class="faculty-button">Learn More</button>
+                </div>
+                <!-- Faculty Member 2 -->
+                <div class="faculty-card">
+                    <img src="images/IBD SIR.jpg" alt="Faculty 2" class="faculty-image">
+                    <h3>Dr. Indu Bhushan Dubey</h3>
+                    <p>Professor</p>
+                    <button class="faculty-button">Learn More</button>
+                </div>
+                <!-- Faculty Member 3 -->
+                <div class="faculty-card">
+                    <img src="images/DIVYA MAM.jpg" alt="Faculty 3" class="faculty-image">
+                    <h3>Prof. Divya Gupta</h3>
+                    <p>Professor</p>
+                    <button class="faculty-button">Learn More</button>
+                </div>
+                <!-- Faculty Member 4 -->
+                <div class="faculty-card">
+                    <img src="images/RICHA MAM.jpg" alt="Faculty 4" class="faculty-image">
+                    <h3>Dr. Richa Singh</h3>
+                    <p>Professor</p>
+                    <button class="faculty-button">Learn More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Department of CSE IERT. All rights reserved.</p>
+    </footer>
+</body>
+</html>

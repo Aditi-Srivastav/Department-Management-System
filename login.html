@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pragati</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right,rgb(25, 50, 71),rgb(129, 230, 235));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff; /* White text for contrast */
+        }
+
+        header {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ff6f61;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        /* Main Section Styling */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70%;
+            width: 100%;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus {
+            border-color: #ff6f61;
+        }
+
+        form button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff9a9e;
+        }
+
+        form a {
+            display: block;
+            margin-top: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        form a:hover {
+            color: #ff6f61;
+        }
+
+        /* Footer Styling */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            section {
+                width: 90%;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup_student.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Login to your account</h2>
+            <form id="loginForm" action="login.php" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IERT CSE Department. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

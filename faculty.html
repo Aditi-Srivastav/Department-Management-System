@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+</head>
+<style>
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #04041a;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styling */
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    font-size: 2em;
+}
+
+/* Form Styling */
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+input[type="email"], input[type="password"], input[type="text"], textarea, select, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="email"], input[type="password"], input[type="text"], select, input[type="file"] {
+    background-color: #f9f9f9;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Faculty Dashboard Styles */
+#faculty-dashboard {
+    display: none;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+select {
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+textarea, input[type="file"] {
+    font-size: 1em;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.8em;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <h2>Faculty Login</h2>
+    <form action="faculty_login.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="faculty-dashboard" style="display: none;">
+        <h2>Faculty Dashboard</h2>
+        
+        <form action="upload_attendance.php" method="POST">
+            <h3>Upload Attendance</h3>
+            <label for="year">Select Year:</label>
+            <select id="year" name="year" required>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+            <textarea name="attendance" placeholder="Enter roll numbers of present students, separated by commas" required></textarea>
+            <button type="submit">Upload Attendance</button>
+        </form>
+
+        <form action="upload_marks.php" method="POST">
+            <h3>Upload Marks</h3>
+            <label for="year-marks">Select Year:</label>
+            <select id="year-marks" name="year" required>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+            <input type="text" name="subject" placeholder="Subject Name" required>
+            <textarea name="marks" placeholder="Enter roll numbers and marks (e.g., Roll:Marks), separated by commas" required></textarea>
+            <button type="submit">Upload Marks</button>
+        </form>
+
+        <form action="upload_materials.php" method="POST" enctype="multipart/form-data">
+            <h3>Upload Study Materials</h3>
+            <label for="year-materials">Select Year:</label>
+            <select id="year-materials" name="year" required>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+            <input type="file" name="study_material" required>
+            <button type="submit">Upload Materials</button>
+        </form>
+    </div>
+</body>
+</html>
