@@ -41,12 +41,13 @@ The **CSE Department Management System** is a web-based platform designed to str
 3. Set up the database using the provided SQL file.
 4. Configure the database connection in the PHP files.
 5. Run the project on a local server (e.g., XAMPP or WAMP).
+6. http://localhost/CSE%20Department/CSE%20Department/index.html
+
 
 ## 📜 License
 This project is open-source and available under the MIT License.
 
 ## 🤝 Contributors
-## 👥 Contributors
 - [Aditi Srivastava](https://github.com/Aditi-Srivastav)
 - [Harsh Vardhan Tiwari](https://github.com/harryvardhan)
 
